@@ -1,46 +1,70 @@
-# Getting Started with Create React App
+# Google Sheets-like Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
+This project is a web application that closely mimics the core functionalities and user interface of Google Sheets. It was developed as part of the Zeotap Software Engineer Intern Assignment (Jan 2025). The application focuses on implementing key spreadsheet features such as data entry, basic formatting, mathematical functions, and data quality tools.
 
-## Available Scripts
+## Features Implemented
+- **Spreadsheet Interface**: A UI resembling Google Sheets with support for:
+  - Toolbar, formula bar, and cell grid layout
+  - Drag functionality for cell content and formulas
+  - Cell dependencies for accurate formula updates
+  - Basic formatting (bold, italics, font size, color)
+  - Adding, deleting, and resizing rows and columns
 
-In the project directory, you can run:
+- **Mathematical Functions**:
+  - `SUM`, `AVERAGE`, `MAX`, `MIN`, `COUNT`
 
-### `npm start`
+- **Data Quality Functions**:
+  - `TRIM`, `UPPER`, `LOWER`
+  - (Pending) `REMOVE_DUPLICATES`, `FIND_AND_REPLACE`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Data Entry and Validation**:
+  - Support for numbers, text, and dates
+  - Basic validation to ensure data integrity
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Bonus Features**:
+  - Ability to save and load spreadsheets
+  - Potential for future data visualization support
 
-### `npm test`
+## Tech Stack
+- **React with Syncfusion Spreadsheet Component**: The Syncfusion library was chosen due to its rich spreadsheet functionality out-of-the-box, allowing rapid development within the short 2-day deadline. It provided essential features like cell formatting, formula support, and spreadsheet UI, minimizing the need to build complex features from scratch.
+- **TypeScript**: Added type safety and helped maintain code quality and readability.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Challenges & Workarounds
+- **Limited Timeframe**: With only 2 days to complete the project, using Syncfusion's pre-built spreadsheet component accelerated development significantly.
+- **Unimplemented Functions**: `REMOVE_DUPLICATES` and `FIND_AND_REPLACE` were not fully implemented due to time constraints but are planned for future updates.
 
-### `npm run build`
+## Installation & Usage
+1. Clone the repository:
+```bash
+git clone <repository_url>
+cd <repository_folder>
+```
+2. Install dependencies:
+```bash
+npm install
+```
+3. **Important:** Add your registered Syncfusion license key in `src/index.tsx` before starting the project.
+```tsx
+// src/index.tsx
+import { registerLicense } from '@syncfusion/ej2-base';
+registerLicense('YOUR_LICENSE_KEY');
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Run the application:
+```bash
+npm start
+```
+5. Open `http://localhost:3000` in a browser to view the app.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future Improvements
+- Complete `REMOVE_DUPLICATES` and `FIND_AND_REPLACE` functionalities.
+- Introduce advanced data visualization (charts/graphs).
+- Enhance formula support and introduce complex cell referencing.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Evaluation Criteria Coverage
+- **UI Fidelity**: The application strives to closely resemble Google Sheets.
+- **Functionality**: Core spreadsheet and mathematical functions are in place.
+- **Code Quality**: TypeScript and modular component-based architecture.
+- **Usability**: Designed to be intuitive and user-friendly.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
