@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { registerLicense } from '@syncfusion/ej2-base';
-registerLicense('Ngo9BigBOggjHTQxAR8/V1NMaF1cXmhKYVF+WmFZfVtgcF9CZlZSQmY/P1ZhSXxWdkdhX35YdHJRR2NaVUI=');
+registerLicense('YOUR_LICENSE_KEY');
 
 
 
